@@ -81,5 +81,14 @@ decimal dddd = 3.0M;
 Console.WriteLine(cccc / dddd);
 
 double r = 2.5;
-double area=Math.PI * r * r;
-Console.WriteLine($"Area of a circle with radius {r} is {area}");
+double area = Math.Round(Math.PI * r * r, 2);//四舍五入
+double area1 = Math.Truncate(Math.PI * r * r * 100) / 100;//截断
+double area2 = Math.Ceiling(Math.PI * r * r * 100) / 100;//向上取整
+double area3 = Math.Floor(Math.PI * r * r * 100) / 100;//向下取整
+string str = (Math.PI * r * r).ToString("0.00");//格式化字符串
+
+Console.WriteLine($"Area of a circle with radius {r} is {area} ");
+Console.WriteLine($"Truncated area of a circle with radius {r} is {area1}");
+Console.WriteLine($"Rounded up area of a circle with radius {r} is {area2}");
+Console.WriteLine($"Rounded down area of a circle with radius {r} is {area3}");
+Console.WriteLine($"Formatted area of a circle with radius {r} is {str}");
