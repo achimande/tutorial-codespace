@@ -92,3 +92,11 @@ Console.WriteLine($"Truncated area of a circle with radius {r} is {area1}");
 Console.WriteLine($"Rounded up area of a circle with radius {r} is {area2}");
 Console.WriteLine($"Rounded down area of a circle with radius {r} is {area3}");
 Console.WriteLine($"Formatted area of a circle with radius {r} is {str}");
+
+decimal result;
+result = Math.Round(3.45m, 1, MidpointRounding.ToEven);
+Console.WriteLine($"{result} = Math.Round({3.45m}, 1, MidpointRounding.ToEven)");
+result = Math.Round(3.45m, 1, MidpointRounding.AwayFromZero);
+Console.WriteLine($"{result} = Math.Round({3.45m}, 1, MidpointRounding.AwayFromZero)");
+result = Math.Round(3.47m, 1, MidpointRounding.ToZero);
+Console.WriteLine($"{result} = Math.Round({3.47m}, 1, MidpointRounding.ToZero)\n");
